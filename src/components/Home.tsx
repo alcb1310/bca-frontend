@@ -18,14 +18,10 @@ function App() {
         return <Loading />;
     }
 
-    if (isError) {
-        return <Error message={error.message} />;
-    }
-
     return (
         <>
             <div className="text-3xl font-bold underline" data-testid="title">Hello world!</div>
-            <div>{foo?.message}</div>
+            {isError ? <Error message={error.message} /> : <div>{foo?.message}</div>}
         </>
     );
 }

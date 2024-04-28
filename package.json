@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives",
     "preview": "vite preview",
-    "test": "cypress open"
+    "test": "cypress open --config-file=cypress.config.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
