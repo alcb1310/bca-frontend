@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { getFoo } from "./queries/foo";
-import Loading from "./components/Loading";
-import Error from "./components/Error";
+import { getFoo } from "../queries/foo";
+import Loading from "./Loading";
+import Error from "./Error";
 
 function App() {
     const {
