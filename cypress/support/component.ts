@@ -14,7 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-//import './commands'
+import './commands'
 import { mount } from 'cypress/react18'
 
 // Alternatively you can use CommonJS syntax:
@@ -31,11 +31,3 @@ declare global {
     }
   }
 }
-//
-Cypress.Commands.add('mount', (component, options) => {
-    return mount(component, options)
-})
-//
-// Example use:
-// cy.mount(<MyComponent />)
-

@@ -25,7 +25,8 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 //
-//import { mount } from 'cypress/react'
+import { mount } from 'cypress/react18'
+import Wrapper from "../../src/components/Wrapper";
 //
 // declare global {
 //   namespace Cypress {
@@ -36,3 +37,7 @@
 // }
 //
 // Cypress.Commands.add('mount', mount)
+Cypress.Commands.add('mount', (component, options) => {
+    const wrapper = <Wrapper>{component}</Wrapper>
+    return mount(wrapper, options)
+})
