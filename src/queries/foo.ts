@@ -5,10 +5,10 @@ type Foo = {
 }
 
 export async function getFoo(): Promise<Foo> {
-    const url = import.meta.env.VITE_API_URL || undefined;
-    if (!url) {
-        throw new Error('VITE_API_URL is not defined');
-    }
+    const url = import.meta.env.VITE_API_URL ||  "http://localhost:42069";
+    //if (!url) {
+    //    throw new Error('VITE_API_URL is not defined');
+    //}
 
     try {
         const data = await axios.get(`${url}/foo`);

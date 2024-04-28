@@ -7,4 +7,7 @@ export default defineConfig({
       bundler: "vite",
     },
   },
+  env: {
+    VITE_API_URL: "http://localhost:42069",
+  },
 });
