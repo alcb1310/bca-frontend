@@ -21,7 +21,7 @@ function App() {
     return (
         <>
             <div className="text-3xl font-bold underline" data-testid="title">Hello world!</div>
-            {isError ? <Error message={error.message} /> : <div>{foo?.message}</div>}
+            {isError ? <Error message={error.message} /> : <div data-testid="message">{foo?.message}</div>}
         </>
     );
 }

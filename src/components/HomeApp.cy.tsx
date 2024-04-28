@@ -14,6 +14,7 @@ describe("<App />", () => {
   it("renders", () => {
       cy.wait("@foo").then(() => {
           cy.get('[data-testid="title"]').should("have.text", "Hello world!");
+          cy.get('[data-testid="message"]').should("have.text", "Hello world!");
       })
   });
 });
