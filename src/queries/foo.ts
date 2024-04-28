@@ -10,7 +10,10 @@ export async function getFoo(): Promise<Foo> {
         throw new Error('VITE_API_URL is not defined');
     }
 
-    const data = await axios.get(`${url}/foo`);
-
-    return data.data;
+    try {
+        const data = await axios.get(`${url}/foo`);
+        return data.data;
+    } catch (error) {
+        throw error;
+    }
 }
