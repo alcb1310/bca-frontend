@@ -24,7 +24,7 @@ function App() {
 
     return (
         <>
-            <div className="text-3xl font-bold underline">Hello world!</div>
+            <div className="text-3xl font-bold underline" data-testid="title">Hello world!</div>
             <div>{foo?.message}</div>
         </>
     );
